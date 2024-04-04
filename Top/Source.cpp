@@ -16,6 +16,7 @@ void main()
 	{
 		cout << "1. Вывести массив" << endl;
 		cout << "2. Сортировка" << endl;
+		cout << "3. Сортировка наоборот" << endl;
 		cout << "0. Выход" << endl;
 		int input; 
 		cout << "Введите пункт пиццы => ";
@@ -25,10 +26,13 @@ void main()
 		{
 		case (1):
 			for (int i = 0; i < size; i++)
-				cout << arr[i] << endl;
+				cout << arr[i] << " ";
 			break;
 		case (2):
 			sort(arr, arr + size);
+			break;
+		case (3):
+			sort(arr, arr + size, [](int a, int b) {return a > b; });
 			break;
 		case (0):
 			return;
