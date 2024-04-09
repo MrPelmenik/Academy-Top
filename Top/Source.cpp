@@ -18,6 +18,7 @@ void main()
 		cout << "2. Вывести массив с индексами" << endl;
 		cout << "3. Сортировка" << endl;
 		cout << "4. Сортировка наоборот" << endl;
+		cout << "5. Новый рандом значений" << endl;
 		cout << "0. Выход" << endl;
 		int input; 
 		cout << "Введите пункт пиццы => ";
@@ -39,6 +40,12 @@ void main()
 			break;
 		case (4):
 			sort(arr, arr + size, [](int a, int b) {return a > b; });
+			break;
+		case (5):
+			for (int i = 0; i < size; i++)
+			{
+				arr[i] = rand() % 10;
+			}
 			break;
 		case (0):
 			return;
