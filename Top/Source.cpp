@@ -14,6 +14,7 @@ void main()
 	while (true)
 	{
 		cout << "1. Вывести массив" << endl;
+		cout << "2. Вывести массив с индексами" << endl;
 		cout << "0. Выход" << endl;
 		int input; 
 		cout << "Введите пункт пиццы => ";
@@ -25,6 +26,11 @@ void main()
 			for (int i = 0; i < size; i++)
 				cout << arr[i] << endl;
 			break;
+		case (2):
+			for (int i = 0; i < size; i++)
+				cout << i << " = " << arr[i] << endl;
+			break;
+
 		case (0):
 			return;
 		default:
